@@ -4,6 +4,8 @@ export const hasSuperadoLaPuntuacion = () => {
     return partida.puntuacion > MAXIMO_PUNTUACION;
   };
 
+// Te da uno es estos numeros de forma aleatorio
+// 1,2,3,4,5,6,7,10,11,12
 export const dameCarta = (): number => {
   let nuevaCarta = 0;
   // Loq que sea con random
@@ -57,17 +59,17 @@ export const dameImagenDeCarta = (numeroCarta: number) => {
   };
  
 export const dameMensajePorPuntuacion = (puntuacion: number) :string => {
-  if (partida.puntuacion >= 0 && puntuacion < 2) {
+  if (puntuacion >= 0 && puntuacion < 2) {
     return "Parece que no has entendido el juego";
   }
 
-  if (partida.puntuacion >= 2 && puntuacion < 4) {
+  if (puntuacion >= 2 && puntuacion < 4) {
     return "Parece que no has entendido el juego";
   }
-  if (partida.puntuacion >= 4 && puntuacion < 6) {
+  if (puntuacion >= 4 && puntuacion < 6) {
     return "bien, parece que lo estas entendiendo";
   }
-  if (partida.puntuacion >= 6) {
+  if (puntuacion >= 6) {
     return "bien hecho!!";
   }
 
